@@ -1,0 +1,14 @@
+	
+	
+	
+	           var imagen = new Image();
+            //
+            function procesaImagen(){
+                ctx.drawImage(imagen,470,0);         
+            }
+            //
+            imagen.src = "grito.jpg";
+            imagen.onload = function(e){
+                procesaImagen();
+            }
+	

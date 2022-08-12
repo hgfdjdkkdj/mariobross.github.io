@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>inicio</title>
+    <style>
+        #miCanvas {
+            border: dotted 2px black;
+            background: #E61414;
+        }
+    </style>
+    <header>
+        <div>
+            <nav>
+                <li><a href="nombre.html">nombre</a></li>
+                <li><a href="index.html">index</a></li>
+            </nav>
+    </header>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("miCanvas");
+            if (canvas && canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+                if (ctx) {
+
+
+                    ctx.lineWidth = 17;
+                    ctx.fillStyle = "white";
+                    ctx.strokeStyle = "Black";
+                    //Letra "O"
+                    ctx.arc(48, 120, 40, 0, 2 * Math.PI);
+                    ctx.stroke();
+
+
+
+                    //Letra "S"
+                    //Descripcion de lineas
+                    ctx.lineWidth = 17;
+                    ctx.strokeStyle = "blue";
+                    //Dibujamos lineas
+                    ctx.beginPath();
+                    ctx.moveTo(100, 90);
+                    ctx.lineTo(145, 80);
+                    ctx.moveTo(105, 80);
+                    ctx.lineTo(105, 125);
+                    ctx.moveTo(100, 125);
+                    ctx.lineTo(140, 125);
+                    ctx.moveTo(140, 120);
+                    ctx.lineTo(140, 160);
+                    ctx.moveTo(100, 160);
+                    ctx.lineTo(145, 160)
+                    ctx.stroke();
+
+                    //Letra "C"
+                    //Descripcion de lineas
+                    ctx.lineWidth = 17;
+                    ctx.strokeStyle = "black";
+                    //Dibujamos lineas
+                    ctx.beginPath();
+                    ctx.arc(180, 120, 40, 1, 1.7 * Math.PI);
+                    ctx.stroke();
+
+
+                    //Letra "A"
+                    //Descripcion de lineas
+                    ctx.lineWidth = 13;
+                    ctx.strokeStyle = "blue";
+                    //Dibujamos lineas
+                    ctx.beginPath();
+                    ctx.moveTo(245, 75);
+                    ctx.lineTo(240, 165);
+                    ctx.moveTo(210, 75);
+                    ctx.lineTo(205, 165);
+                    ctx.moveTo(220, 130);
+                    ctx.lineTo(230, 130);
+                    ctx.moveTo(240, 90);
+                    ctx.lineTo(200, 80);
+                    ctx.stroke();
+
+                    //Letra "R"
+                    //Descripcion de lineas
+                    ctx.lineWidth = 16;
+                    ctx.strokeStyle = "black";
+                    ctx.fillStyle = "blue";
+                    //Dibujamos lineas
+                    ctx.beginPath();
+                    ctx.fillRect(270, 80, 50, 30);
+                    ctx.strokeRect(270, 80, 50, 30);
+                    ctx.moveTo(270, 75);
+                    ctx.lineTo(270, 165);
+                    ctx.moveTo(290, 108);
+                    ctx.lineTo(330, 165);
+                    ctx.stroke();
+
+                    var imagen = new Image();
+                    //
+                    function procesaImagen() {
+                        ctx.drawImage(imagen, 400, 400);
+                    }
+                    //
+                    imagen.src = "oscarr.jpeg";
+                    imagen.onload = function (e) {
+                        procesaImagen();
+                    }
+
+                } else {
+                    alert("Error al crear tu contexto");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color: blue">bienvenido</h1>
+
+    </head>
+    <body background="fondooo.jpeg">
+
+        <img src="oscarr.jpeg"
+             width="430"
+             height="441">
+
+        <canvas id="miCanvas" width="400px" height="300px">
+            Tu navegador no soporta CANVAS
+        </canvas>
+    </body>
+</html>
